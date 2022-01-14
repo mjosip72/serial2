@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="icon" href="icon.png">
+
+	<script src="code.js" defer></script>
+
+	<meta charset="utf-8">
+	<title>Serial monitor</title>
+
+</head>
+
+<body>
+	
+	<div class="content">
+
+		<div class="textarea-container">
+			<textarea id="input_data_control" spellcheck="false" readonly></textarea>
+		</div>
+
+		<div class="controls-container">
+
+			<input id="output_data_control" placeholder="Enter message" spellcheck="false" style="margin-right: 12px">
+
+			<button onclick="on_btn_clear()" style="margin-right: 12px">Clear</button>
+
+			<select id="baudrate_select" style="margin-right: 12px">
+				<option>115200</option>
+				<option>9600</option>
+			</select>
+
+			<span id="status_label" style="margin-right: 12px"></span>
+			<button id="connect_control"></button>
+
+		</div>
+
+	</div>
+
+</body>
+
+</html>
