@@ -53,12 +53,16 @@ body {
 	padding-top: 200px;
 	margin: auto;
 	width: 100%;
-	max-width: 60%;
+	max-width: 80%;
 }
 
 /* #region textarea */
 
 .textarea-container {
+
+	display: inline-block;
+	margin: 0 12px;
+
 	border: 2px solid var(--theme-accent);
 	border-radius: 12px;
 	padding: 14px;

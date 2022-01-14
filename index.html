@@ -22,23 +22,38 @@
 	
 	<div class="content">
 
-		<div class="textarea-container">
-			<textarea id="input_data_control" spellcheck="false" readonly></textarea>
+		<div>
+			<div class="textarea-container" style="width: 36%;">
+				<textarea id="output_data_control" placeholder="Enter message" spellcheck="false"></textarea>
+			</div>
+			<div class="textarea-container" style="width: 56%;">
+				<textarea id="input_data_control" spellcheck="false" readonly></textarea>
+			</div>
 		</div>
 
 		<div class="controls-container">
 
-			<input id="output_data_control" placeholder="Enter message" spellcheck="false" style="margin-right: 12px">
+			<div style="display: inline-block; width: 40%;">
 
-			<button onclick="on_btn_clear()" style="margin-right: 12px">Clear</button>
+				<button onclick="on_btn_clear1()" style="margin-right: 12px">Clear</button>
+				<button onclick="on_btn_send_data()" style="margin-right: 12px">Send</button>
 
-			<select id="baudrate_select" style="margin-right: 12px">
-				<option>115200</option>
-				<option>9600</option>
-			</select>
+			</div>
 
-			<span id="status_label" style="margin-right: 12px"></span>
-			<button id="connect_control"></button>
+			<div style="display: inline-block; width: 56%;">
+
+				<button onclick="on_btn_clear2()" style="margin-right: 12px">Clear</button>
+
+				<select id="baudrate_select" style="margin-right: 12px">
+					<option>115200</option>
+					<option>9600</option>
+				</select>
+
+				<span id="status_label" style="margin-right: 12px"></span>
+				<button id="connect_control"></button>
+
+			</div>
+
 
 		</div>
 

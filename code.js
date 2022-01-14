@@ -6,18 +6,22 @@ let DATA_SUFIX = "";
 let input_data_control = document.getElementById("input_data_control");
 let output_data_control = document.getElementById("output_data_control");
 
-function on_btn_clear() {
+function on_btn_clear1() {
+    output_data_control.value = "";
+}
+
+function on_btn_clear2() {
     input_data_control.value = "";
+}
+
+function on_btn_send_data() {
+    send_data();
 }
 
 function on_data(value) {
     input_data_control.value += value;
     input_data_control.scrollTop = input_data_control.scrollHeight;
 }
-
-output_data_control.addEventListener("keypress", e => {
-    if(e.code == "Enter") send_data();
-});
 
 // #endregion
 
@@ -92,7 +96,6 @@ connect_control.addEventListener("click", e => {
 
 async function send_data() {
     await writer.write(output_data_control.value + DATA_SUFIX);
-    output_data_control.value = "";
 }
 
 function set_port_status(open) {
